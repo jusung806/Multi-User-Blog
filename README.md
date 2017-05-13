@@ -28,3 +28,10 @@ You will need to use a web browser(I.E. Chrome).  You will need to download and 
   7. css folder
     * This contains files for bootstrap to run the javascript code.  Also download all the files inside this folder.
   
+# How To Run
+
+1. Clone project.
+2. Run the Goodle App Engine Launcher.
+3. Create a new application.
+4. You can test run this project on localhost:8080.
+5. Run the new application and open the link to webpage.
