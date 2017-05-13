@@ -1,0 +1,163 @@
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+    background-color: #696969;
+}
+
+h4{
+    margin: 5px;
+    background-color: #696969;
+    text-align: center;
+
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #696969;
+    text-align: right
+}
+
+
+
+.comments {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #696969;
+}
+
+.user{
+    font-size: 25px;
+    font-family:Arial;
+    color:magenta;
+    background-color: #696969;
+}
+
+.login-link {
+    color: magenta;
+    text-decoration: none;
+    background-color: #696969;
+    text-align: right
+}
+
+.login-link:visited {
+    color: magenta;
+    background-color: #696969;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    background-color: #696969;
+    color:cyan;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #696969;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    background-color: #696969;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  background-color: #696969;
+  text-align: center;
+}
+
+label + label {
+    margin-top: 20px;
+    background-color: #696969;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+    background-color: #696969;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+  background-color: #696969;
+  text-align: center;
+}
+
+input[type=submit] {
+  font-size: 24px;
+  background-color: #696969;
+  text-align: left;
+
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+    background-color: #696969;
+}
+
+.smaller{
+    font-size:smaller;
+    background-color: #696969;
+}
+
+.post + .post {
+    margin-top: 15px;
+    background-color: #696969;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+    background-color: #696969;
+    text-align: center;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #696969;
+    text-align: center;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+    background-color: #696969;
+    text-align: right;
+
+}
+
+.post-content {
+    margin-top: 5px;
+    background-color: #696969;
+    text-align: center;
+}
+

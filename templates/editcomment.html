@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="comment_update" style="text-align: center; color: purple;">
+	<h1>Update Your Thoughts</h1>
+<form method="POST">
+    <textarea class="form-control" name="comment_text" style="width:400px;height:100px;">{{comment_text}}</textarea>
+    <br>
+    <div class="alert-danger">{{edit_error}}</div>  
+    <input type="submit" class="btn btn-success" name="update_comment" value="Update">
+    <input type="submit" class="btn btn-default" name="cancel" value="Cancel">
+</form>
+</div>
+{% endblock %}

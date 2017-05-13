@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/css/style.css" rel="stylesheet">
+        <title>Where Unicorns Dream!</title>
+    </head>
+    <body>
+        <nav class=" navbar navbar-default "; >
+            <div class="container" style="color:darkviolet;">
+                <div class="row">
+                    <div class="text-center navbarol-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="navbar-header" style="background-color:slategrey; text-align: center;">
+                            <a href="/"><h1>
+                            Where Unicorns Dream!
+                            </h1></a>
+                        </div>
+                        <ul class=" nav navbar-nav navbar-right" style="background-color:slategrey; text-align: center;">
+                            {% if not user %}
+                                <a style="color:magenta" href="/login"><h2>Login</h2></a></li>
+                                <a style="color:magenta" href="/signup">Create a name</a></li>
+                            {% elif user %}
+                                <a style="color:magenta" href="/newpost"><h2>Rant or Dream</h2></a></li>
+                                <a style="color:magenta" href="/logout"><h2>Logout</h2></a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container" style="background-color:slategrey";>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

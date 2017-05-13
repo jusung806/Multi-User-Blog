@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login" style="text-align: center; color:deeppink;">
+	<h1>Login</h1>
+<form method="POST">
+    <label for="username">Username</label>
+    <input type="text" name="username" value="{{username}}" required>
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" value="" required>
+    <br>
+    <div class="alert-danger">{{error}}</div>
+    <br>
+    <input type="submit" class="btn btn-success" value="Login">
+</form>
+	<hr>
+	Need a login?<br><br>
+	<a class="btn btn-default" href="/signup">Signup</a>
+</div>
+{% endblock %}

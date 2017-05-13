@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="rant_title" style="text-align: center; color:purple;"> 
+<h1>New Unicorn Dreams</h1>
+</div>
+<form method="POST">
+    <div class="label" style="text-align: center; color:cyan;">
+       Dream Name<br>
+        <input class="form-control" style="width:400px; text-align: center;" type="text" name="subject" value="{{subject}}">
+    <br><br>
+        Rants<br>
+        <textarea class="form-control" name="content" style="width:400px;height:200px;">{{content}}</textarea>
+    <br>
+    </div>
+    <div class="alert-danger">{{post_error}}</div>
+    <div class="post_button" style="text-align: center;">
+        <input type="submit" class="btn btn-success" value="Post">
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="post_info" style="text-align: center; color: purple;">
+    <h2>{{post.subject}}</h2>
+    <small>Posted by {{post.user.name}} on {{post.created.strftime("%b %d, %Y")}}</small>
+    <p class="content">{{post.content | safe}}</p>
+
+</div>
+<div class="buttons" style="text-align:center; color:cyan;">
+{% if user %}
+    <form method="POST">
+        <input type="submit" class="btn btn-success" name='like' value='&#128077; {{likes}} likes'>
+        <input type="submit" class="btn btn-warning" name='unlike' value='&#128078; {{unlikes}} unlikes'>
+        <input type="submit" class="btn btn-info" name='edit' value='&#9998; edit'>
+        <input type="submit" class="btn btn-danger" name='delete' value="&#9003; delete">
+    </form>
+    <span class="alert-danger">{{error}}</span>
+Add Your Own Dreams
+{% endif %}
+<hr>
+{% if comments_count == 1 %}
+    <label>{{comments_count}} comment</label>
+{% else %}
+    <label>{{comments_count}} comments</label>
+{% endif %}
+{% for comment in post_comments %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <strong>{{comment.text}}</strong>
+            <br><br>
+            <div>
+                <div class="pull-left">
+                    <small>Posted by {{comment.user.name}} on {{comment.created.strftime("%b %d, %Y")}}</small>
+                </div>
+                <div class="pull-right">
+                    {% if comment.user.name == user.name %}
+                        <a style="color:magenta" href="/blog/{{post.key().id()}}/editcomment/{{comment.key().id()}}">edit</a> | 
+                        <a style="color:magenta" href="/blog/{{post.key().id()}}/deletecomment/{{comment.key().id()}}">delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+<br><br>
+{% if user %}
+    <form method="POST">
+        <label>
+            Add Your Own Dreams<br>
+            <textarea class="form-control" name="comment_text" style="width:400px;height:100px;">{{comment_text | safe}}</textarea>
+        </label>
+        <br>
+        <div class="alert-danger">{{comment_error}}</div>
+        <input type="submit" class="btn btn-success" name="add_comment" value="Post">
+    </form>
+{% endif %}
+{% endblock %}

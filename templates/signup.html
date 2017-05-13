@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="Signup" style="color: darkturquoise; text-align: center;">
+    <h1>Signup</h1>
+<form method="POST">
+    <label for="usarname">Username</label>
+    <input type="text" name="username" value="{{username}}" required>
+    {{error_username}}
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" value="" required>
+    {{error_password}}
+    <br>
+    <label for="verify">Verify Password</label>
+    <input type="password" name="verify" value="" required>
+    {{error_verify}}
+    <br>
+    <label for="email">Email (Optional)</label>
+    <input type="text" name="email" id="email" value="">
+    <br><br>
+    <input type="submit" class="btn btn-success" value="Signup">
+</form>
+<hr>
+Registered Before?<br><br>
+<a class="btn btn-default" href="/login">Login</a>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{% for blog in blogs %}
+    <div class="post-preview">
+        <a href='/post/{{blog.key().id()}}' style="color:magenta; text-align:center;">
+            <h2 class="post-title">{{blog.subject}}</h2>
+        </a>
+        <p class="content" style="color:cyan; text-align:center;">{{blog.content | safe}}</p>
+        <small class="post-meta" style="color:cyan">Posted by {{blog.user.name}} on {{blog.created.strftime("%b %d, %Y")}}</small>
+    </div>
+    <hr>
+{% endfor %}
+{% endblock %}
